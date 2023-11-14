@@ -1,0 +1,75 @@
+.page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 500px;
+  padding: 30px;
+  background-color: #f9faaa;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  font-family: "Noto Sans", "Nanum Gothic", sans-serif;
+}
+
+.titleWrap {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contentWrap {
+  margin-bottom: 20px;
+}
+
+.inputTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.inputWrap {
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+.bottomButton,
+.kakaoButton,
+.signButton {
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.bottomButton {
+  background-color: #ffd903;
+}
+
+.kakaoButton {
+  background-color: #fffcd8;
+}
+
+.signButton {
+  background-color: #20ff03;
+}
+
+button:hover {
+  opacity: 0.8;
+}

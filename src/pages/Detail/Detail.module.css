@@ -1,0 +1,219 @@
+.Layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  padding-top: 200px;
+  padding-bottom: 100px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.Line {
+  width: 100%;
+  border-bottom: 1px solid rgb(128, 128, 128, 0.2);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.MapTitle {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: var(--font-size-m);
+}
+.LeftBox {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+}
+
+.LeftBox > .ImageSlideWrapper {
+  overflow: hidden; /*check out container's movement : command + */
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  height: 130px;
+  width: 100%;
+}
+.LeftBox > .ImageSlideWrapper > .SlideContainer {
+  position: absolute;
+  padding-left: 24px;
+  height: 120px;
+  width: 630px;
+  left: -125px;
+}
+.LeftBox > .ImageSlideWrapper > .SlideContainer > .SlideItem {
+  position: relative;
+  z-index: 3;
+  font-size: 30px;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 10px 15px;
+  border: 2px solid white;
+}
+
+.LeftBox > .ImageSlideWrapper > .SlideContainer > .SlideItem:hover {
+  cursor: pointer;
+  border: 2px solid blue;
+}
+
+.ButtonContainer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  /* height: 100%; */
+  z-index: 2;
+}
+
+.SlideArrowButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 35px;
+  min-height: 35px;
+  font-size: 20px;
+
+  border-radius: 50%;
+}
+
+.SlideArrowButton:hover {
+  cursor: pointer;
+}
+
+.RightBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  font-size: var(--font-size-m);
+}
+
+.RightBox > .Category {
+  font-size: var(--font-size-xs);
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  margin-bottom: 6px;
+}
+
+.RightBox > .ItemName {
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.RightBox > .ItemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.RightBox > .ItemInfo > .ItemTitle {
+  font-size: var(--font-size-s);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.RightBox > .ItemInfo > .ItemDesc {
+  font-size: var(--font-size-s);
+}
+.NumberView {
+  font-size: var(--font-size-xs);
+}
+.CheckNumber {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  font-size: var(--font-size-s);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.CheckNumber:hover {
+  cursor: pointer;
+}
+.RightBox > .ItemInfo {
+  text-align: left;
+}
+
+.Categories {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+  font-size: var(--font-size-xs);
+  color: gray;
+  margin-top: 6px;
+}
+
+.Categories > .Item {
+  border-bottom: 1px solid gray;
+}
+.ImageBox {
+  width: 430px;
+  height: 430px;
+}
+
+.Section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  max-width: 1200px;
+
+  /* flex-direction: colum; */
+}
+
+.SectionContentBox {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .Layout {
+    padding-top: 100px;
+  }
+  .SectionContentBox {
+    flex-direction: column;
+  }
+
+  .LeftBox {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .ImageBox {
+    width: 330px;
+    height: 330px;
+  }
+
+  .LeftBox > .ImageSlideWrapper > .SlideContainer {
+    width: 500px;
+  }
+}

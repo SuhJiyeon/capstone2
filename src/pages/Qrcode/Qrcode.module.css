@@ -1,0 +1,66 @@
+/* styles.module.css */
+
+.qrcodeGeneratorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  width: 100vw;
+  height: 60vh;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.yellowBar {
+  width: 100%;
+  height: 5px;
+  background-color: #ffcc24;
+  margin-bottom: 40px;
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ffcc24; /* 노란색 테마 */
+  color: #000000;
+  border: none;
+  padding: 15px 30px; /* 크기 수정 */
+  font-size: 16px;
+  cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+button:hover {
+  background-color: #ffdd57; /* 호버 시 색상 변경 */
+}
+
+.qrcodeContainer {
+  margin-top: 20px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.qrcode {
+  max-width: 300px;
+  height: auto;
+}

@@ -1,0 +1,35 @@
+
+  const onClickConfirmButton = async () => {
+    // Validation logic for email and password
+    // ...
+
+ 
+      axios.post('https://www.assac.shop/api/user/sign-up', {
+        email,
+        username:id,
+        name,
+        nickname,
+        password:pw,
+        
+      })
+
+      .then(function (response) {
+        if (response.code === 201) {
+          console.log(response);
+          alert('회원가입이 완료되었습니다.');
+          navigate('/sign-in');
+        }
+        if (response.code === 409) {
+          console.log(response);
+          alert(response.result.message);
+        } else {
+          alert('회원가입이 완료되었습니다.');
+          navigate('/sign-in');
+        }
+      })
+      .catch(function (error) {
+        alert('회원가입 실패. 다시 입력해 주세요.');
+        
+        console.log(error);
+      });
+  };

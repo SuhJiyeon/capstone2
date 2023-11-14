@@ -1,0 +1,253 @@
+.Layout {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-bottom: 1px solid rgb(128, 128, 128, 0.2);
+
+  z-index: 1;
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.Section {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 70px;
+
+  background-color: white;
+  max-width: var(--max-width);
+}
+
+.NavList {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 80px;
+}
+
+.NavItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.LogoBox {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+}
+.CategoryIconBox {
+  visibility: hidden;
+  display: flex;
+  width: fit-content;
+  min-width: fit-content;
+  font-weight: 500;
+}
+
+.CategoryIconBox:hover + .CategoryList {
+  visibility: visible;
+}
+.CategoryList {
+  top: 0;
+  left: 0;
+  font-weight: 500;
+
+  display: flex;
+  /* flex-direction: column; */
+  z-index: 999;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* max-width: 200px; */
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* margin-left: 100px; */
+  /* margin-right: 20px; */
+}
+.CategoryList:hover {
+  visibility: visible;
+}
+
+.CategoryItem {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.CategoryItem:hover {
+  cursor: pointer;
+  color: #ffcc24;
+}
+
+.SearchBoxLayout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SearchBox {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.SearchBoxInput {
+  width: 100%;
+  height: 3.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border: 2px solid #ffcc24;
+
+  outline: none;
+  padding-left: 10px;
+  box-sizing: border-box;
+  padding-right: 46px;
+  margin: 0;
+  color: gray;
+}
+
+.SearchButtonBox {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+  top: 0px;
+  right: 0px;
+  width: 60px;
+  height: 100%;
+}
+
+.SearchButtonItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ToolBoxLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 240px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.BottomNav {
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: whitesmoke;
+  border-top: 1px solid gray;
+}
+
+.BottomNavList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 20px;
+}
+.BottomNavItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  color: rgb(128, 128, 128, 0.5);
+}
+
+.BottomNavItem:hover {
+  color: black;
+}
+/* media start */
+@media (max-width: 768px) {
+  .Section {
+    display: flex;
+    padding-top: 20px;
+
+    align-items: center;
+  }
+  .NavList {
+    padding-left: 110px;
+    padding-right: 10px;
+    gap: 0;
+  }
+  .Layout {
+    /* background-color: red; */
+    height: 70px;
+    padding-bottom: 6px;
+  }
+  .CategoryIconBox {
+    position: fixed;
+    top: 18px;
+  }
+  .ToolBoxLayout {
+    display: none;
+  }
+  .LogoBox {
+    display: none;
+  }
+  .BottomNav {
+    visibility: visible;
+  }
+  .CategoryList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 50px;
+    height: 100vh;
+    width: 80%;
+    border-right: 1px solid rgb(128, 128, 128, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+  }
+
+  .CategoryIconBox {
+    visibility: visible;
+  }
+}
+
+/* media end */
+
+input[type="radio"]:checked + label {
+  color: black;
+}
